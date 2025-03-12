@@ -1,11 +1,17 @@
 package com.api.journalingApp.journalApp.jdbc;
 
 
+import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class PostgreSQLJDBC {
+
+
+
+
     public static void insertData(Connection conn) {
         String insertSQL = "INSERT INTO your_table (column1, column2) VALUES (?, ?)";
         try (PreparedStatement pstmt = conn.prepareStatement(insertSQL)) {
